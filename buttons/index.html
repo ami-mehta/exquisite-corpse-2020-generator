@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exquisite-corpse</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<script>let socket = io.connect();
+
+  function headClick() {
+    let msg = 0;
+    socket.emit("fromUsers", msg);
+  }
+  function torsoClick() {
+    let msg = 1;
+    socket.emit("fromUsers", msg);
+  }
+  function feetClick() {
+    let msg = 2;
+    socket.emit("fromUsers", msg);
+  }
+  </script>
+  <div id="container">
+    <h1 id='title'>Exquisite Corpse (2020):
+      Wearable Tech Generator</h1>
+    <button onClick="headClick()">HEAD</button>
+    <button onClick="torsoClick()">TORSO</button>
+    <button onClick="feetClick()">FEET</button>
+  </div>
+</body>
+
+</html>

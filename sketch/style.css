@@ -1,0 +1,30 @@
+/* style.css */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: left;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
+
+#qr-code {
+  height: 100%;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#qr-container {
+  width: 50vw;
+  height: 40vh;
+}
